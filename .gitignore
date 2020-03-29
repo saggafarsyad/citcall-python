@@ -6,4 +6,5 @@ venv/
 
 # PyPi output
 dist/
+build/
 citcall_py.egg-info/
