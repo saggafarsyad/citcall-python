@@ -334,7 +334,7 @@ class Citcall:
         elif method == "sms":
             action = Citcall.METHOD_SMS
         elif method == "sms-otp":
-            action = Citcall.METHOD_SMS
+            action = Citcall.METHOD_SMS_OTP
         elif method == "verify_otp":
             action = Citcall.METHOD_VERIFY_MOTP
         else:
