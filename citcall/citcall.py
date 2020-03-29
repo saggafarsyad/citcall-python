@@ -346,7 +346,8 @@ class Citcall:
         res = response.text
         return res
 
-    def clean_msisdn(self, msisdn):
+    @staticmethod
+    def clean_msisdn(msisdn):
         """
         Clean Msisdn
 
@@ -365,7 +366,8 @@ class Citcall:
             msisdn = "+62" + msisdn[2:]
         return msisdn
 
-    def is_three(self, prefix):
+    @staticmethod
+    def is_three(prefix):
         """
         Cek prefix is three
 
