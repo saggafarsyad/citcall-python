@@ -56,7 +56,7 @@ class Citcall:
                 if msisdn[0:2] == "62":
                     if 10 < len(msisdn) < 15:
                         prefix = msisdn[0:5]
-                        if msisdn > 13:
+                        if len(msisdn) > 13:
                             if self.is_three(prefix):
                                 _continue = True
                         else:
