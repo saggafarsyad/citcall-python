@@ -170,6 +170,7 @@ class Citcall:
                         return ret
 
         else:
+            ret = {}
             return json.loads(ret)
 
     def sms(self, param):
@@ -361,7 +362,7 @@ class Citcall:
         if msisdn[0:2] == "+0":
             msisdn = "+62" + msisdn[2:]
         if msisdn[0:1] == "0":
-            msisdn = "+62" + a[2:]
+            msisdn = "+62" + msisdn[2:]
         return msisdn
 
     def is_three(self, prefix):
