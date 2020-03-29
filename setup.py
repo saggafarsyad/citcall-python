@@ -9,6 +9,7 @@ setuptools.setup(
     author="Saggaf Arsyad",
     author_email="saggaf@nbs.co.id",
     description="Citcall REST API for Python",
+    license="MIT",
     long_description="Provide Citcall function for Sync/Async Miscall, SMS and SMS OTP. Forked from citcall-devel",
     long_description_content_type="text/markdown",
     url="https://github.com/saggafarsyad/citcall-python",
