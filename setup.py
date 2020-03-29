@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="citcall-py",
-    version="0.1",
+    version="0.1.1",
     author="Saggaf Arsyad",
     author_email="saggaf@nbs.co.id",
     description="Citcall REST API for Python",
