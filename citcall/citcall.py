@@ -4,6 +4,7 @@ import re
 
 import requests
 
+
 class Citcall:
     """
     This is the Python Class client library for use Citcall's API. 
@@ -234,7 +235,7 @@ class Citcall:
         return json.loads(ret)
 
     def verify_motp(self, param):
-        """ 
+        """
         Verify Miscall OTP
 
         Parameters :
