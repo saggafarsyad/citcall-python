@@ -24,7 +24,7 @@ class Citcall:
 
         Parameters :
             userid (str) : your userid
-            apiker (str) : your apikey  
+            apikey (str) : your apikey
         """
         self.userid = userid
         self.apikey = apikey
