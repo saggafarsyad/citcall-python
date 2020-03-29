@@ -15,6 +15,7 @@ class Citcall:
     URL_CITCALL = "https://gateway.citcall.com"
     VERSION = "/v3"
     METHOD_SMS = "/sms"
+    METHOD_SMS_OTP = "/smsotp"
     METHOD_SYNC_MISCALL = "/call"
     METHOD_ASYNC_MISCALL = "/asynccall"
     METHOD_VERIFY_MOTP = "/verify"
@@ -173,7 +174,7 @@ class Citcall:
             ret = {}
             return json.loads(ret)
 
-    def sms(self, param):
+    def sms(self, param, method="sms"):
         """
         SMS
 
@@ -224,7 +225,11 @@ class Citcall:
                 "senderid": senderid,
                 "text": text,
             }
-            method = "sms"
+
+            # If method sms-otp set callback url
+            if method == "sms-otp" and "callback_url" in param:
+                param_hit["callback_url"] = param["callback_url"]
+
             ret = self.send_request(param_hit, method)
         else:
             ret = {
@@ -328,10 +333,12 @@ class Citcall:
             action = Citcall.METHOD_ASYNC_MISCALL
         elif method == "sms":
             action = Citcall.METHOD_SMS
+        elif method == "sms-otp":
+            action = Citcall.METHOD_SMS
         elif method == "verify_otp":
             action = Citcall.METHOD_VERIFY_MOTP
         else:
-            # code
+            raise Exception("unknown request method")
             pass
 
         url = Citcall.URL_CITCALL + Citcall.VERSION + action
