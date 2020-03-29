@@ -3,3 +3,7 @@
 
 # Virtual Env
 venv/
+
+# PyPi output
+dist/
+citcall_py.egg-info/
