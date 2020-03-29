@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="citcall-devel",
+    name="citcall-py",
     version="0.1",
-    author="Citcall",
-    author_email="devel@citcall.com",
+    author="Saggaf Arsyad",
+    author_email="saggaf@nbs.co.id",
     description="Citcall REST API for Python",
-    long_description="Citcall REST API for Python. API support for Synchchronous Miscall, Asynchronous miscall, and SMS.",
+    long_description="Provide Citcall function for Sync/Async Miscall, SMS and SMS OTP. Forked from citcall-devel",
     long_description_content_type="text/markdown",
-    url="https://github.com/citcall/citcall-python",
+    url="https://github.com/saggafarsyad/citcall-python",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
